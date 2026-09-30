@@ -34,5 +34,23 @@ int main()
     cout << "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⢻⣿⡿⡄⣠⢠⢀⣀⣀⢀⠀⠀⣀⣀⣀⣠⣠⣄⣶⡶⣟⢻⠟⠏⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" << endl;
     cout << "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠑⠻⠿⣾⡾⢿⡸⣿⣻⡟⣿⣻⡉⠻⠽⠙⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" << endl;
 
+    int month = 02;
+    int day = 01;
+    int year = 1990;
+
+    cout << "The month is: " << month << endl;
+    cout << "The day is: " << day << endl;
+    cout << "The year is: " << year << endl;
+
+    float pi = 3.14159;
+    cout << "The value of pi is: " << pi << endl;
+
+    bool isRaining = false;
+    cout << "Is it raining? " << (isRaining ? "Yes" : "No") << endl;
+
+    // regla es tipo de dato + nombre de variable = valor;
+    char grade = 'A';
+    cout << "The grade is: " << grade << endl;
+
     return 0;
 }
