@@ -95,5 +95,26 @@ int main()
     cout << "Please enter your age: ";
     cin >> age; // entrada de datos
     cout << "Your age is: " << age << endl;
+
+    // validadores booleanos
+    bool isAdult = age >= 18;
+    cout << "Are you an adult? " << (isAdult ? "Yes" : "No") << endl;
+
+    // en cpp se usa == para comparar valores, no = que es para asignar valores
+    if (age == 18)
+    {
+        cout << "You are exactly 18 years old." << endl;
+    }
+    else
+    {
+        cout << "You are not exactly 18 years old." << endl;
+    }
+
+    cout << (10 < 9) << endl;
+    cout << (10 > 9) << endl;
+    cout << (10 <= 9) << endl;
+    cout << (10 >= 9) << endl;
+    cout << (10 == 9) << endl;
+    cout << (10 != 9) << endl;
     return 0;
 }
