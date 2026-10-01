@@ -88,5 +88,12 @@ int main()
     cout << "The pointer to second direction is: " << apuntadorADirection << endl; // direccion exacta de la variable secondDirection  tipo 0x7ffcc8ba9014
     *apuntadorADirection = 7;                                                      // dentro de la direccion asigna un valor nuevo a la variable secondDirection pero no a la posicion en memoria
     cout << "The second direction after modifying through the pointer is: " << secondDirection << endl;
+
+    // entrada de datos
+
+    int age = 0;
+    cout << "Please enter your age: ";
+    cin >> age; // entrada de datos
+    cout << "Your age is: " << age << endl;
     return 0;
 }
