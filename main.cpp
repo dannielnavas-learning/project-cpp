@@ -116,5 +116,19 @@ int main()
     cout << (10 >= 9) << endl;
     cout << (10 == 9) << endl;
     cout << (10 != 9) << endl;
+
+    // switch
+    switch (age)
+    {
+    case 18:
+        cout << "You are 18 years old." << endl;
+        break;
+    case 21:
+        cout << "You are 21 years old." << endl;
+        break;
+    default:
+        cout << "You are neither 18 nor 21 years old." << endl;
+        break;
+    }
     return 0;
 }
