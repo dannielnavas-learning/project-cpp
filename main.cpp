@@ -1,6 +1,9 @@
 #include <iostream>
 
 using namespace std;
+int sumar(int a, int b);
+void printCuteMessage();
+bool isPlayerDead(int hp);
 // elementos
 
 int main()
@@ -130,5 +133,49 @@ int main()
         cout << "You are neither 18 nor 21 years old." << endl;
         break;
     }
+
+    // funciones
+    cout << "The sum of 5 and 3 is: " << sumar(5, 3) << endl;
+    printCuteMessage();
+    cout << "The player is:" << isPlayerDead(1) << endl;
+    if (isPlayerDead(0))
+    {
+        cout << "Game over" << endl;
+    }
+
+    // arreglos
+    char corbatas[5]; //  se les da un tamaño fijo al inicio
+    corbatas[0] = 'v';
+    corbatas[1] = 'n';
+    corbatas[2] = 'o';
+    corbatas[3] = 'q';
+    corbatas[4] = 'w';
+
+    cout << corbatas[0] << endl;
+
+    string names[4] = {"Danniel", "Leslye", "Samuel", "Luis"};
+
+    cout << names[1] << endl;
+    cout << names[2] << endl;
+
     return 0;
+}
+
+int sumar(int a, int b)
+{
+    return a + b;
+}
+
+void printCuteMessage()
+{
+    cout << "You are cute!" << endl;
+}
+
+bool isPlayerDead(int hp)
+{
+    if (hp <= 0)
+    {
+        return true;
+    }
+    return false;
 }
