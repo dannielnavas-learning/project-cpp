@@ -158,6 +158,19 @@ int main()
     cout << names[1] << endl;
     cout << names[2] << endl;
 
+    bool isHappy = true; // ejemplo de validador booleano
+    char input = ' ';
+    do 
+    {
+        cout << "Are you happy? " << (isHappy ? "Yes" : "No") << endl;
+        cout << "Enter 'F' if you are no longer happy: ";
+        cin >> input;
+        if(input == 'F') {
+            isHappy = false;
+            cout << "You are no longer happy." << endl;
+        }
+    } while (!isHappy);
+
     return 0;
 }
 
