@@ -6,9 +6,26 @@ void drawMap(int heroPosition, char map[5]);
 int main()
 {
     int heroPosition = 1;
+    bool isGameOver = false;
+    char input = ' ';
     char gameMap[5] = {'1', '1', '1', '1', '1'};
 
     drawMap(heroPosition, gameMap);
+
+    while (isGameOver == false)
+    {
+        cin >> input;
+
+        if (input == 'd')
+            heroPosition++;
+        else if (input == 'a')
+            heroPosition--;
+        else if (input == 'q')
+            isGameOver = true;
+
+        drawMap(heroPosition, gameMap);
+    }
+
     return 0;
 }
 
