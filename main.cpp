@@ -180,22 +180,36 @@ int main()
 
     // arrays
 
-    string names[5] = {"Alice", "Bob", "Charlie", "David", "Eve"};
+    string namesAlt[5] = {"Alice", "Bob", "Charlie", "David", "Eve"};
     for (int i = 0; i < 5; i++)
     {
-        cout << names[i] << endl;
+        cout << namesAlt[i] << endl;
     }
 
     int index = 0;
 
     while (index < 5)
     {
-        cout << names[index] << endl;
+        cout << namesAlt[index] << endl;
         index++;
     }
 
     // for es para cuando se sabe cuántas veces se va a iterar
     // while es para cuando no se sabe cuántas veces se va a iterar
+
+    // ejemplos con varias dimensiones de arrays
+    int matrix[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}};
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
