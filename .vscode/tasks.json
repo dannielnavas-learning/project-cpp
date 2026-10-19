@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build game (main + player)",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-Wall",
+        "-Wextra",
+        "-g3",
+        "${workspaceFolder}/game/main.cpp",
+        "${workspaceFolder}/game/player.cpp",
+        "-o",
+        "${workspaceFolder}/game/output/main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "C/C++: g++ build active file",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-Wall",
+        "-Wextra",
+        "-g3",
+        "${file}",
+        "${workspaceFolder}/game/player.cpp",
+        "-o",
+        "${fileDirname}/output/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}
