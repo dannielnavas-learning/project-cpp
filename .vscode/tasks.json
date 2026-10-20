@@ -11,6 +11,8 @@
         "-g3",
         "${workspaceFolder}/game/main.cpp",
         "${workspaceFolder}/game/player.cpp",
+        "${workspaceFolder}/game/map-cell.cpp",
+        "${workspaceFolder}/game/game-map.cpp",
         "-o",
         "${workspaceFolder}/game/output/main"
       ],
@@ -32,6 +34,8 @@
         "-g3",
         "${file}",
         "${workspaceFolder}/game/player.cpp",
+        "${workspaceFolder}/game/map-cell.cpp",
+        "${workspaceFolder}/game/game-map.cpp",
         "-o",
         "${fileDirname}/output/${fileBasenameNoExtension}"
       ],
