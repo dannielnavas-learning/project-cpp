@@ -32,7 +32,7 @@ void GameMap::setPlayerCell(int playerX, int playerY)
     }
 
     playerCell = &cells[playerY][playerX];  // & consigue la direccion de memoria
-    playerCell->id = 3;  // Marca la celda del jugador con 'P'
+    playerCell->id = '3';  // Marca la celda del jugador con 'P'
 }
 
 void GameMap::loadMapFromFile() {
@@ -42,11 +42,21 @@ void GameMap::loadMapFromFile() {
     //     return;
     // }
     string line;
+    int row = 0;
     ifstream myFile("map.txt");
 
     if(myFile.is_open()){
+        while(getline(myFile, line)) {
+            cout << line << endl;
+            for (int col = 0; col < line.length(); ++col) {
 
-
+                if(line[col] == '0')
+                    cells[row][col].id = 0;
+                else
+                    cells[row][col].id = line[col];
+            }
+            row++;
+        }
     } else {
         cout << "Unable to open map file." << endl;
     }
