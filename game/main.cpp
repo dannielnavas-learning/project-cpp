@@ -16,9 +16,13 @@ int main() {
         // loop del juego
         Hero.CallInput();
         //Actualizacion del jugador en el mapa
-        map.setPlayerCell(Hero.x, Hero.y);
+        if (!map.setPlayerCell(Hero.x, Hero.y)) {
+            Hero.resetToSafePosition();
+        }
         // se dibuja el mapa
         map.draw();
+
+
     }
 
     return 0;
