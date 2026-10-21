@@ -10,6 +10,10 @@ public:
 
     int x, y;
 
+    int lastX, lastY;
+
+    void resetToSafePosition();
+
 protected:
 
 

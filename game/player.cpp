@@ -19,15 +19,19 @@ void Player::CallInput() {
 
     switch (userInput) {
         case 'w':
+            lastY = y;
             y = y -1;
             break;
         case 'a':
+            lastX = x;
             x -= 1;
             break;
         case 's':
+            lastY = y;
             y = y +1;
             break;
         case 'd':
+            lastX = x;
             x += 1;
             break;
         default:
@@ -35,4 +39,10 @@ void Player::CallInput() {
     }
 
     cout << "Current position: (" << x << ", " << y << ")" << endl;
+}
+
+
+void Player::resetToSafePosition() {
+    x = lastX;
+    y = lastY;
 }
