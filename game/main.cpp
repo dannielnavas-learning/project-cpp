@@ -13,7 +13,11 @@ int main() {
 
     cout << "Starting game loop..." << endl;
     while (isGameOver == false) {
+        // loop del juego
         Hero.CallInput();
+        //Actualizacion del jugador en el mapa
+        map.setPlayerCell(Hero.x, Hero.y);
+        // se dibuja el mapa
         map.draw();
     }
 
