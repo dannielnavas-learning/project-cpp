@@ -17,7 +17,7 @@ public:
     void draw();
 
     // esta funcion obtine las coordenadas del jugador y actualiza la celda correspondiente que es el mapa
-    void setPlayerCell(int playerX, int playerY );
+    bool setPlayerCell(int playerX, int playerY );
 
 
 

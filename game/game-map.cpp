@@ -23,16 +23,25 @@ void GameMap::draw()
 }
 
 
-void GameMap::setPlayerCell(int playerX, int playerY)
+bool GameMap::setPlayerCell(int playerX, int playerY)
 {
+
     // cout << "Las coordenadas del jugador son: (" << playerX << ", " << playerY << ")" << endl;
 
-    if(playerCell != NULL) {
-        playerCell->id = 0;  // Desmarca la celda anterior del jugador
+    if(cells[playerY][playerX].isBlocked() == false){
+        if (playerCell != NULL)
+        {
+            playerCell->id = 0; // Desmarca la celda anterior del jugador
+        }
+
+        playerCell = &cells[playerY][playerX]; // & consigue la direccion de memoria
+        playerCell->id = '3';                  // Marca la celda del jugador con '3'
+        return true;
+    } else {
+        return false;
     }
 
-    playerCell = &cells[playerY][playerX];  // & consigue la direccion de memoria
-    playerCell->id = '3';  // Marca la celda del jugador con 'P'
+
 }
 
 void GameMap::loadMapFromFile() {
