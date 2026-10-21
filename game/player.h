@@ -8,8 +8,10 @@ public:
 
     void CallInput();
 
-protected:
     int x, y;
+
+protected:
+
 
 private:
 };

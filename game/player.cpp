@@ -19,23 +19,18 @@ void Player::CallInput() {
 
     switch (userInput) {
         case 'w':
-            y = y +1;
-            cout << "Moving up" << endl;
+            y = y -1;
             break;
         case 'a':
             x -= 1;
-            cout << "Moving left" << endl;
             break;
         case 's':
-            y = y -1;
-            cout << "Moving down" << endl;
+            y = y +1;
             break;
         case 'd':
             x += 1;
-            cout << "Moving right" << endl;
             break;
         default:
-            cout << "Invalid input" << endl;
             break;
     }
 
