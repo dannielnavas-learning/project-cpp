@@ -8,6 +8,8 @@ public:
 
     char id;
 
+    bool isBlocked();
+
 protected:
 
 private:
