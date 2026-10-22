@@ -38,7 +38,7 @@ void Player::CallInput() {
             break;
     }
 
-    cout << "Current position: (" << x << ", " << y << ")" << endl;
+    // cout << "Current position: (" << x << ", " << y << ")" << endl;
 }
 
 
