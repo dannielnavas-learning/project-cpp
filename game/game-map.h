@@ -20,6 +20,8 @@ public:
     bool setPlayerCell(int playerX, int playerY );
 
 
+    void drawIntro();
+
 
 protected:
     void loadMapFromFile();
