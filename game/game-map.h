@@ -6,6 +6,7 @@
 class GameMap
 {
 public:
+    bool isGameOver;
     GameMap();
 
     // apuntador
@@ -21,6 +22,7 @@ public:
 
 
     void drawIntro();
+    void drawVictory();
 
 
 protected:

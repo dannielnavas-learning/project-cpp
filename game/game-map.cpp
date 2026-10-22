@@ -9,6 +9,7 @@ GameMap::GameMap()
     // vacia el apuntador para que no tenga datos iniciales
     playerCell = NULL;
     loadMapFromFile();
+    isGameOver = false;
 }
 
 
@@ -29,6 +30,12 @@ bool GameMap::setPlayerCell(int playerX, int playerY)
     // cout << "Las coordenadas del jugador son: (" << playerX << ", " << playerY << ")" << endl;
 
     if(cells[playerY][playerX].isBlocked() == false){
+        if(cells[playerY][playerX].id == '$') {
+            drawVictory();
+            isGameOver = true;
+            return true;
+        }
+
         if (playerCell != NULL)
         {
             playerCell->id = 0; // Desmarca la celda anterior del jugador
@@ -55,6 +62,24 @@ void GameMap::drawIntro() {
         return;
     }
     while (getline(myFile, line)) {
+        cout << line << endl;
+    }
+    cin >> line;
+}
+
+void GameMap::drawVictory()
+{
+    string line;
+    int row = 0;
+    ifstream myFile("victory.txt");
+    if (!myFile.is_open())
+    {
+        cout << "Unable to open map file." << endl;
+
+        return;
+    }
+    while (getline(myFile, line))
+    {
         cout << line << endl;
     }
     cin >> line;
